@@ -65,6 +65,8 @@ lazy val encryption = builders.lib("encryption")
 lazy val root = Project("cs-api-core", file("."))
   .settings(
     publishArtifact := false,
+    publish := (),
+    publishLocal := (),
     parallelExecution in IntegrationTest := false
   ).dependsOn(
   coreModels,
