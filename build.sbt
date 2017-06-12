@@ -66,6 +66,7 @@ lazy val coreModels = builders.lib("models").settings(
 lazy val root = Project("cs-api-core", file("."))
 .settings(
   packagedArtifacts := Map.empty,
+  publishArtifact := false,
   publish := {},
   parallelExecution in IntegrationTest := false
 ).dependsOn(
