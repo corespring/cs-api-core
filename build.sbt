@@ -66,6 +66,7 @@ lazy val root = Project("cs-api-core", file("."))
   .settings(
     publishArtifact := false,
     publish := (),
+    publishTo := Some(Resolver.file("Unused transient repository", file("target/unusedrepo"))),
     publishLocal := (),
     parallelExecution in IntegrationTest := false
   ).dependsOn(
